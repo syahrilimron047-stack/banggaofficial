@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import StudioAI from './components/StudioAI';
+import SongGenerator from './components/SongGenerator';
 import Logo from './components/Logo';
 
 const App: React.FC = () => {
@@ -28,8 +29,8 @@ const App: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-gray-300 hover:text-brand-accent font-medium text-sm tracking-wide transition-colors">LAYANAN</a>
-            <a href="#studio-ai" className="text-gray-300 hover:text-brand-accent font-medium text-sm tracking-wide transition-colors">STUDIO AI</a>
-            <a href="#contact" className="text-gray-300 hover:text-brand-accent font-medium text-sm tracking-wide transition-colors">KONTAK</a>
+            <a href="#ai-composer" className="text-gray-300 hover:text-brand-accent font-medium text-sm tracking-wide transition-colors">AI COMPOSER</a>
+            <a href="#studio-ai" className="text-gray-300 hover:text-brand-accent font-medium text-sm tracking-wide transition-colors">CHAT ASSISTANT</a>
             <button className="px-5 py-2 border border-brand-accent/50 text-brand-accent rounded-full hover:bg-brand-accent hover:text-brand-dark transition-all text-sm font-semibold">
               Booking Sekarang
             </button>
@@ -54,7 +55,8 @@ const App: React.FC = () => {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-brand-dark border-t border-white/10 p-6 flex flex-col gap-4 shadow-2xl">
             <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-brand-accent py-2">LAYANAN</a>
-            <a href="#studio-ai" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-brand-accent py-2">STUDIO AI</a>
+            <a href="#ai-composer" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-brand-accent py-2">AI COMPOSER</a>
+            <a href="#studio-ai" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-brand-accent py-2">CHAT ASSISTANT</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-brand-accent py-2">KONTAK</a>
           </div>
         )}
@@ -63,6 +65,8 @@ const App: React.FC = () => {
       <main className="flex-grow">
         <Hero />
         <Services />
+        {/* Insert Song Generator here for visibility */}
+        <SongGenerator /> 
         <StudioAI />
 
         {/* Contact/Footer Section */}
